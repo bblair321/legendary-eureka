@@ -11,10 +11,7 @@ class BikeClub
   end
 
   def biker_with_most_rides
-    # Find the biker with the most rides by:
-  # 1. Using the `max_by` method to select the biker with the highest number of rides.
-  # 2. Iterating through the @bikers array to evaluate each biker.
-  # 3. Accessing the `rides` hash of each biker and flattening the array of distances for each ride to count all the ride distances.
-    @bikers.max_by { |biker| biker.rides.values.flatten.size }
+    # max_by is looking at all the bikers. 
+    @bikers.max_by { |biker| biker.rides.values.flatten.size } # For each biker we are counting how many rides they have
   end
 end
